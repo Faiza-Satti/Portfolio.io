@@ -1,0 +1,426 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+:root{
+    --bodyColor: #F8F9F9;
+    /*  rgb(207, 192, 177); */
+    --lSection:#E5E8E8;
+    --rSection:#F8F9F9;
+    --linkColor:brown;
+    --fontColor:black;
+    --font: 'Poppins', sans-serif;
+    --headingFont:'Righteous', cursive;
+}
+
+body{
+    background-color: var(--bodyColor);
+    font-family: var(--font);
+    font-size: 1rem;
+    line-height: 20px;
+}
+  
+.row{
+    /* the page was showing horizontal scroolbar (adding negative margin in rows of BS) */
+    --bs-gutter-x: 0rem;
+}
+
+/* the class added when click button on navigation bar */
+.newClass{
+    height: 250px;
+    border-radius: 3%;
+    background-color: rgb(34, 31, 31);
+    display: block;
+    width: 100%;
+    text-align: left;
+    margin-top: 20px;
+    -webkit-box-shadow: inset 0px 0px 18px 5px rgba(117, 106, 106, 0.44); 
+    box-shadow: inset 0px 0px 18px 5px rgba(131, 122, 122, 0.44);
+}
+
+/* the class added when click button on navigation bar */
+.navbar-new{
+    color: black;
+    margin-top: 20px;
+    margin-left: 0px;
+    margin-right: 8px;
+}
+
+.navbar-new li {
+    color: white;
+    list-style-type:none;
+}
+
+.navbar-new li a{
+    color: white;
+    font-family: var(--headingFont);
+}
+/* till here */
+
+.navbar{
+    height: 67px;
+    -webkit-box-shadow: inset 0px 0px 18px 5px rgba(117, 106, 106, 0.44); 
+    box-shadow: inset 0px 0px 18px 5px rgba(131, 122, 122, 0.44);
+}
+
+.navbar-nav{
+    margin-left: 500px;
+}
+
+.navbar-nav .nav-item{
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+.navbar-brand, .nav-item{
+    padding-left: 2%;
+    color:white;
+}
+
+
+.container{
+    /* text-align: center; 
+        to center the text on upper profile
+    */
+    text-transform: uppercase;
+    color: white;
+}
+
+.container h1{
+    margin-top: 200px;
+    border-bottom: 1px solid rgb(245, 241, 241);
+    border-bottom-color: rgba(253, 234, 234, 0.993);
+    font-family: var(--headingFont);
+
+    /* to make border line equal to text  */
+    display: inline-block;
+    
+}
+
+/* illustrations */
+.logo {
+    display: block;
+    text-indent: -9999px;
+    width: 350px;
+    height: 350px;
+    background: url(images/covering.svg);
+    background-size: 350px 350px;
+    margin-left: 200px;
+}
+
+.success {
+    display: block;
+    text-indent: -9999px;
+    background: url(images/success.svg);
+    width: 430px;
+    height: 430px;
+    background-size: 430px 430px;    
+    margin-left: 200px;
+}
+/* illustrations */
+
+/* cover of webpage */
+.container h4{
+    margin-top: 20px;
+    font-family: var(--headingFont);
+}
+
+.jumbotron{
+    background: no-repeat center fixed url(images/building3.jpg);
+    position: relative;
+}
+
+.anotherImage{
+    background: no-repeat center fixed url(images/parallax2.jpg);
+    position: relative;
+}
+
+.layer {
+    background-color: rgba(6, 75, 62, 0.8);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.jumbotron .container{
+    /* to bring text over the overlay */
+    z-index:4;
+    position: relative;
+}
+/* cover of webpage */
+
+.anotherImage .container{
+    margin-top: 80px;
+    text-align: center; 
+    z-index:4;
+    position: relative;
+}
+
+#draggable{
+    border-radius: 5%;
+    width: 350px;
+    height: 550px;
+    margin-left: 10px;
+}
+
+#draggable img{
+    border-radius: 5%;
+    border:1px solid black;
+    width: 350px;
+    height: 550px;
+    border: 1px solid white;
+    filter: grayscale(80%);
+    margin-left: 10px;
+}
+
+.MyProfile .row{
+    background-color: var(--bodyColor);
+    margin: 20px;
+    margin-top: 75px;
+    padding-top: 55px;
+    padding-bottom: 85px;
+}
+  
+.wrapper{
+    width: 2 rem;
+    margin:15px 20px 20px 110px;
+    /* top,ryt,bottom,left */
+}
+
+.skill {
+    margin-bottom: 35px;
+    position: relative;
+    overflow-x:hidden;
+        
+}
+
+.skill > p {
+    font-size: 18px;
+    font-weight: 700;
+    color: #1a1716;
+    padding-bottom: 5px;
+    margin: 0;
+}
+
+.skill:before{
+    width: 100%;
+    height: 5px;
+    content: "";
+    display: block;
+    position: absolute;
+    background: #959595;
+    bottom: 0;
+}
+.skill-bar {
+    width: 100%;
+    height: 5px;
+    background:#000000;
+    display: block;
+    position: relative;
+}
+
+.skill-bar span{
+    position: absolute;
+    border-top: 5px solid #000000;
+    top: -30px;
+    padding: 0;
+    font-size: 18px;
+    padding: 3px 0;
+    font-weight: 500;
+}
+.skill-bar {
+    position: relative;     
+}
+
+/* education section */
+
+#education{
+    margin-top: 5px;
+    padding-top: 65px;
+}
+
+#eduedu{
+    padding-top: 30px;
+    padding-left: 40px;
+}
+
+#EduSvg{
+    width: 500px;
+}
+
+table{
+    font-weight: bold;
+    font-size: larger;
+    height:300px;
+}
+
+table tr{
+    border-bottom: 1px solid rgb(245, 241, 241);
+    border-bottom-color: rgba(253, 234, 234, 0.993);
+}
+
+/* acheivements section */
+
+#achievements{
+    margin-top: 5px;
+    padding-top: 65px;
+    padding-bottom: 90px;
+}
+
+.achievements h3{
+    height: 80px;
+    font-weight: bold;
+    font-size:xx-large;
+    font-family: var(--font);
+    border:1px solid black;
+}
+
+#achievements-left{
+    padding-top: 30px;
+    padding-left: 30px;
+}
+
+a{
+    text-decoration: none;
+    color:var(--linkColor);
+}
+
+a:hover{
+    color:maroon;
+}
+
+/* work section */
+
+#Work{
+    padding-top: 15px;
+}
+
+
+#Buttoning button{
+    background-color: rgb(179, 178, 174);
+    font-weight: bold;
+    color: black;
+    border:gray;
+}
+
+#workCards .card{
+    background-color: rgb(179, 178, 174);
+    font-weight: bold;
+    border:black;
+}
+
+footer{
+    background-color: gray;
+    margin-top:180px
+}
+
+#followAccounts{
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    height: 190px;
+    padding-bottom: 100px;
+    padding-top: 180px;
+}
+
+#followAccounts a{
+    text-decoration: none;
+    color: white;
+    padding-left: 10px;
+    padding-right: 15px;
+    padding-bottom: 20px;
+}
+
+/* adjust things whcih can't be chnged with BS*/
+@media (max-width: 1000px) {
+
+    .MyProfile .row{
+        display: flex; 
+        justify-content: center; 
+        align-items: center;
+
+    }
+
+    #draggable img{
+        border-radius: 50%;
+        width: 450px;
+        height: 450px;
+        border: 1px solid white;
+        filter: grayscale(80%);
+    }
+
+    #draggable{
+        border-radius: 50%;
+        width: 450px;
+        height: 450px;
+        padding-left: 0;
+    }
+
+    .wrapper{
+        margin-left:72px;
+        width: 550px;
+        margin-top:142px;
+        margin-bottom: 50px;
+    }
+
+    #socialAcc{
+        width:80%;
+        margin-left: 45px;
+    }
+
+    #eduedu{
+        margin-right: 30px;
+    }
+
+    .logo{
+        margin-top: 60px;
+        margin-bottom: 70px;
+    }
+
+    .success{
+        margin-top: 20px;
+        width: 430px;
+        height: 430px;
+        background-size: 430px 430px;
+    }
+     #achievements-left{
+        width:99%;
+    }
+
+    #achievements-right{
+        width:99%;
+        display: flex; 
+        justify-content: center; 
+        align-items: center;
+    } 
+
+    #EduSvg{
+        display: flex; 
+        justify-content: center; 
+        align-items: center;
+        width: 99%;
+    }
+
+  }
+
+@media (max-width: 1200px) {
+
+    .navbar-nav{
+        margin-left: 400px;
+    }
+
+    #eduedu{
+        margin-left: 20px;
+        width: 100%;
+    }
+    
+    .navbar-nav .nav-item{
+        margin-left: 3px;
+        margin-right: 3px;
+    }
+
+    .success{
+        margin-left: 20px;
+        margin-right: 100px;
+    }
+}

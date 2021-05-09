@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">    
+    <link rel="icon" href="css/images/fav.png"  sizes="16*16" type="png">
+    <link rel="stylesheet" href="css/Bootstrap_css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="css/ContactStyle.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.16/angular.min.js"></script>
+    <script src="js/jquery-1.12.4.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <title>Contact Me</title>
+    
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+      $( function() {
+        var availableCountries = [
+          "Afghanistan",
+          "Albania",
+          "Algeria",
+          "Argentina",
+          "Armenia",
+          "Australia",
+          "Austria",
+          "Austrian Empire",
+          "Azerbaijan",
+          "Bahrain",
+          "Bangladesh",
+          "Benin (Dahomey)",
+          "Bolivia",
+          "Bosnia and Herzegovina",
+          "Botswana",
+          "Brazil",
+          "Chile",
+          "China",
+          "Colombia",
+          "Comoros",
+          "Fiji",
+          "Finland",
+          "France",
+          "Iceland",
+          "India",
+          "Indonesia",
+          "Iran",
+          "Iraq",
+          "Pakistan",
+          "Philippine",
+          "Poland",
+          "Portugal",
+          "Qatar",
+          "Saudi Arabia",
+          "Somalia",
+          "South Africa",
+          "South Sudan",
+          "Spain",
+          "Sri Lanka",
+          "Sudan",
+          "Yemen",
+          "Zambia",
+          "Zimbabwe"
+];
+        $( "#country").autocomplete({
+          source: availableCountries
+        });
+      } );
+      </script>
+  </head>
+<body>
+
+  <div class="anotherImage" style="height: 450px;">
+    <div class="container">
+      <h4>Okay Okay. Just Email Me</h4>
+    </div>
+
+    <div class="layer">
+    </div>
+  </div>
+                                                <!--Contact Section-->
+
+    <div class="container-md justify-content-center" id="contact">
+
+        <!-- assignment criteria: form -->
+          <form ng-app="">
+            <div class="form-group">
+              <label for="exampleFormControlInput1">Enter Your Name</label>
+              <input type="text" ng-model="samename" class="form-control" id="exampleFormControlInput1">
+            </div>
+
+            <div class="form-group">
+              <label for="exampleFormControlInput1">Enter Your Email Address</label>
+              <input type="email" class="form-control" id="exampleFormControlInput1">
+            </div>
+
+            <div class="form-group">
+            <label>Select Your Country <span ng-bind="samename"></span></label>
+              <input type="text" id="country" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+            </div>
+
+            <div class="form-group">
+              <label for="exampleFormControlTextarea1">Write Your Message <span ng-bind="samename"></span></label>
+              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+
+            <button type="button" class="btn btn-danger"><a href = "mailto: fsatti425@gmail.com">Send Email</a></button>
+            <button type="button" class="btn btn-danger"><a href = "mailto: fsatti425@gmail.com">Request a Project</a></button>
+
+          </form>
+
+    </div>
+
+</body>

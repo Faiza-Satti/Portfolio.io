@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">    
+    <link rel="icon" href="css/images/fav.png"  sizes="16*16" type="png">
+    <link rel="stylesheet" href="css/Bootstrap_css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery-1.12.4.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <title>Faiza Kousar Satti</title>
+    
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script>
+         $(document).ready(function(){
+            $( function() {
+              $( "#draggable" ).draggable();
+            });
+
+
+          //filling the skill bars with getting number from span element
+          // and positioning span values on right
+          var i=1;
+          $(function(){
+            $(".skill-bar").each(function(){
+              // alert($(this).text());
+              var ho=$(this).text();
+              $( ".skill" ).find( ".skill"+i).css("width", ho);
+              $( ".skill"+i ).find( ".skill-count"+i).css("right", "0");
+              $( ".skill"+i ).find( ".skill-count"+i).css("font-weight", "700","font-size","18px","padding-bottom","5px");              
+              i++;
+              
+            });
+
+            $(function() {
+              $("#accordion").accordion({
+                heightStyle: "content"
+              });
+              $("#accordion").accordion({
+                collapsible: true
+              });
+              $("#accordion").accordion({
+                active:false
+              });
+            });
+          });
+
+          //heading of accordion sectns
+          $("#accordion h3").click(function(){
+            $(this).css("background-color","white");
+            $(this).css("color","black");
+          });
+
+
+          //filter
+          $(".category-button").click(function(){
+        var filterValue = $(this).attr('data-filter');
+        if(filterValue == "all")      {
+            $(".all").hide("slow");
+            $(".all").show("slow");
+            }
+        else if(filterValue == "Web-Applications")    {
+                $(".all").hide("slow");
+                $(".Web-Applications").show("slow");
+            }
+        else if(filterValue == "Desktop-Applications") {
+                $(".all").hide("slow");
+                $(".Desktop-Applications").show("slow");
+            }
+        else if(filterValue == "Web-Design") {
+                $(".all").hide("slow");
+                $(".Web-Design").show("slow");
+            }
+        else if(filterValue == "Photoshop")  {
+                $(".all").hide("slow");
+                $(".Photoshop").show("slow");
+            }
+        });
+
+        //navigation bar k liye
+        $(".navbar-toggler").click(function(){
+         var x= $('.navbar-collapse ul').attr('class');
+           if(x=="navbar-new"){
+            $(".navbar-collapse").hide();
+            $(".navbar-collapse").removeClass("newClass");
+            $(".navbar-collapse ul").removeClass("navbar-new");
+            $(".navbar-collapse ul").addClass("navbar-nav");
+          }
+          else{
+            $(".navbar-collapse").show();
+            $(".navbar-collapse").addClass("newClass");
+            $(".navbar-collapse ul").removeClass("navbar-nav");
+            $(".navbar-collapse ul").addClass("navbar-new");
+            // alert(x);
+          }
+          });
+        
+        
+});
+
+        </script>
+  </head>
+<body>
+
+                                          <!-- Navigation Bar -->
+                                         
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand" href="#">Faiza Satti</a>
+
+        <!--HamBurger Icon and Button added-->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="navbar-collapse collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#skills">Skills</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#achievements">Achievements</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#education">Education</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#Work">Work</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="Contact.html" target="_blank">Contact</a>
+                </li>
+          </ul>
+        </div>
+       
+    </nav>
+
+                                            <!--CoverPhoto-->
+
+    <div class="UpperProfilePortion" id="home">
+        <div id="top" class="jumbotron" style="height: 800px;">
+          <div class="container">
+            <h1>Hi, I'm Faiza Kousar Satti</h1>
+            <h4>I'm a Student of Capital University of Science and Technology, Having 6th Semester of the Bachelor's Degree. </h4>
+            <h4>This is My Portfolio, hope you like it.</h4>
+          </div>
+
+          <!-- add overlay to background -->
+          <div class="layer">
+          </div>
+       </div>
+    </div>
+
+
+                                            <!-- The Profile Section (pic+skills)-->
+
+    <div class="MyProfile" id="skills">
+      <div class="row">
+        
+          <div id="draggable" class="col-md-6">
+            <img src="css/images/ProfilePic.jpg" alt="Profile Picture">
+          </div>
+
+          <div class="col-md-6 wrapper">
+            
+                              <!-- skills section -->
+                    <h1 style="font-weight: bold;" class="how-title">What are My Skills?</h1>
+                    <br><br>
+                    <div class="skill">
+                        <p>HTML, CSS (SASS)</p>
+                        <div class="skill-bar skill1 wow slideInLeft animated">
+                            <span class="skill-count1">95%</span>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <p>JAVASCRIPT</p>
+                        <div class="skill-bar skill2 wow slideInLeft animated">
+                             <span class="skill-count2">55%</span>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <p>JQUERY</p>
+                        <div class="skill-bar skill3 wow slideInLeft animated">
+                            <span class="skill-count3">85%</span>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <p>PHP</p>
+                        <div class="skill-bar skill4 wow slideInLeft animated">
+                            <span class="skill-count4">60%</span>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <p>BASH, BATCH PROGRAMMING</p>
+                        <div class="skill-bar skill5 wow slideInLeft animated">
+                            <span class="skill-count5">80%</span>
+                        </div>
+                    </div>
+                    <div class="skill">
+                      <p>JAVA</p>
+                      <div class="skill-bar skill6 wow slideInLeft animated">
+                          <span class="skill-count6">90%</span>
+                      </div>
+                  </div>
+                  <div class="skill">
+                    <p>C++</p>
+                    <div class="skill-bar skill7 wow slideInLeft animated">
+                        <span class="skill-count7">90%</span>
+                    </div>
+
+                
+          </div>
+      </div>
+    </div>
+    </div>
+
+                                            <!--Education Section-->
+    <hr class="separatingLine">
+    <div id="education">
+      <h1 style="padding-bottom: 40px; padding-left: 30px; font-weight: bold;">My Education</h1>
+      <div class="row">
+        <div id="eduedu" class="col-md-6 col-lg-6 col-sm-6 justify-content-center">
+
+          <table class="table table-borderless" style="border-spacing:3px;">
+            <thead>
+            </thead>
+            <tbody>
+              <tr>
+                <td>School</td>
+                <td>Quaid-e-Azam Public School </td>
+                <td>2005 - 2009</td>
+              </tr>
+              <tr>
+                <td>School</td>
+                <td>Fazaia Inter College </td>
+                <td>2009 - 2015</td>
+              </tr>
+              <tr>
+                <td>College</td>
+                <td>Fazaia Inter College </td>
+                <td>2016 - 2018</td>
+              </tr>
+              <tr>
+                <td>Bachelor's Degree</td>
+                <td>CUST University, ISB </td>
+                <td>2018 - 2022</td>
+              </tr>
+            </tbody>
+          </table>
+
+        </div>
+
+        <div id="EduSvg" class="col-md-6 col-lg-6 col-sm-6">
+          <a href="/" class="logo"></a>
+        </div>
+
+      </div>
+
+    </div>
+
+                                            <!-- Second Parallex effect with Quote -->
+
+    <div class="anotherImage" style="height: 750px;">
+      <div class="container">
+        <h1>مهما تصور أو صدق عقل الإنسان, فإنه قادر على تحقيقه</h1>
+        <h4>Whatever the mind of man can conceive and believe, it can achieve</h4>
+      </div>
+
+      <div class="layer">
+      </div>
+    </div>
+
+
+                                               <!-- Achievements section -->
+    <div id="achievements">
+      <h1 style="padding-bottom: 40px; padding-left: 30px; font-weight: bold;">My Achievements</h1>
+    <div class="row">
+    <div id="achievements-left" class="col-md-6 col-lg-6 col-sm-6 achievements">
+        <div id="accordion">
+          <h3>School</h3>
+          <div class="card text-white bg-dark">
+            <div class="card-body">
+             <ul class="list-group card-text">
+                <li class="list-group-item">Certificate for First Ten Positions SSC-I Exams</li>
+                <li class="list-group-item">Eduational Performance Certificates</li>
+              </ul>
+
+            </div>
+          </div>
+
+
+          <h3>College</h3>
+          <div class="card text-white bg-dark">
+            <div class="card-body">
+              <ul class="list-group card-text">
+                <li class="list-group-item">Scholarship for Top Acedemic Performers in School SSC-II Exams</li>
+              </ul> 
+
+            </div>
+          </div>
+
+
+          <h3>Bachelor's Degree</h3>
+          <div class="card text-white bg-dark">
+            <div class="card-body">
+              <ul class="list-group card-text">
+                <li class="list-group-item">Three Vice Chancellor's Honour Certificates</li>
+                <li class="list-group-item">Two Dean's Honour Certificates</li>
+              </ul>             
+            
+            </div>
+          </div>
+
+          <h3>Master's Degree</h3>
+          <div class="card text-white bg-dark">
+            <div class="card-body">
+              <ul class="list-group card-text">
+                <li class="list-group-item">Not So Far </li>
+              </ul> 
+
+            </div>
+          </div>
+        </div>
+
+    </div>
+          
+    <div id="achievements-right" class="col-md-6 col-lg-6 col-sm-6">
+      <a href="/" class="success"></a>
+    </div>
+    
+  </div>
+    </div>
+
+                                              <!--Work Section-->
+    <hr class="separatingLine">
+    <div id="Work">
+        <!-- data filter, all, web app, photoshop, desktop apps, e-commerce -->
+
+        <div class="container-fluid" style="margin-top: 40px; margin-bottom: 40px;">  
+          <h1 style="padding-bottom: 40px; padding-left: 30px; font-weight: bold;">My Work</h1>
+          <div class="row" style="margin-left: 35px; margin-right: 10px;">
+            <div class="col-md-12" style="margin-top: 5px; margin-bottom: 25px;">
+              
+                <div class="btn-group" id="Buttoning" style="width:fit-content;">
+                  <button type="button" class="btn btn-primary category-button" data-filter = "all"> All </button>
+                  <button type="button" class="btn btn-primary category-button" data-filter = "Web-Applications"> Web Applications</button>
+                  <button type="button" class="btn btn-primary category-button" data-filter = "Desktop-Applications"> Desktop Applications </button>
+                  <button type="button" class="btn btn-primary category-button" data-filter = "Web-Design"> Web Design </button>
+                  <button type="button" class="btn btn-primary category-button" data-filter = "Photoshop"> Photoshop</button>
+                </div>
+            </div>
+
+              <div class="row" id="workCards">
+                <div class="col-md-4 all Web-Applications">
+                  <div class="card border-primary mb-3">
+                    <div class="card-header">Web-Application</div>
+                    <div class="card-body">
+                      <a class="btn-overlay" href="#"data-toggle="modal" data-target=".modal"></a>				
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-4 all Desktop-Applications">
+                  <div class="card border-primary mb-3">
+                    <div class="card-header">Desktop-Application</div>
+                    <div class="card-body">
+                      <a class="btn-overlay" href="#"data-toggle="modal" data-target=".modal"></a>			
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-4 all Web-Design">
+                  <div class="card border-primary mb-3">
+                    <div class="card-header">Web-Design</div>
+                    <div class="card-body">
+                      <a class="btn-overlay" href="#"data-toggle="modal" data-target=".modal"></a>				
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-4 all Photoshop">
+                  <div class="card border-primary mb-3">
+                    <div class="card-header">Photoshop</div>
+                    <div class="card-body">
+                      <a class="btn-overlay" href="#"data-toggle="modal" data-target=".modal"></a>			
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-4 all Web-Applications">
+                  <div class="card border-primary mb-3" >
+                    <div class="card-header">Web-Application</div>
+                    <div class="card-body">
+                      <a class="btn-overlay" href="#"data-toggle="modal" data-target=".modal"></a>			
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-4 all Desktop-Applications">
+                  <div class="card border-primary mb-3">
+                    <div class="card-header">Desktop-Application</div>
+                    <div class="card-body">
+                      <a class="btn-overlay" href="#"data-toggle="modal" data-target=".modal"></a>	
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+          </div>
+          <!-- Modal -->
+          
+          <div class="bs-component">
+                      <div class="modal">
+                        <div class="modal-dialog" role="document">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title">Modal title</h5>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">×</span>
+                              </button>
+                            </div>
+                            <div class="modal-body">
+                              <p>Modal body text goes here.</p>
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-primary">Save changes</button>
+                              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+          </div>
+        </div>	
+
+    </div>
+    
+                                               <!-- Footer -->
+
+    <footer>
+      <div class="row">
+        <div id="followAccounts" class="col-lg-12 col-md-12 col-sm-12">
+        <a href="https://github.com/Faiza-Satti?tab=repositories" target="_blank"><i class="fa fa-github-square" style="font-size:48px;"></i></a>
+        <a href="https://www.linkedin.com/in/faiza-satti-6372071b0/" target="_blank"><i class="fa fa-linkedin-square"  style="font-size:48px;"></i></a>
+        <a href="#" target="_blank"><i class="fa fa-pinterest-square" style="font-size:48px;"></i></a>
+        <a href="#" target="_blank"><i class="fa fa-twitter-square" style="font-size:48px;"></i></a>
+        <a href="#" target="_blank"><i class="fa fa-youtube-square" style="font-size:48px;"></i></a>
+        <a href="#" target="_blank"><i class="fa fa-facebook-square" style="font-size:48px;"></i></a>
+      </div>
+      </div>
+    </footer>
+
+</body>
+</html>
